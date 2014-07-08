@@ -453,6 +453,7 @@ Request.prototype.init = function (options) {
     var lookup_table = {};
     do { lookup_table[lookup.join('/')]={} } while(lookup.pop())
     for (r in lookup_table){
+		if(r)
       try_next(r);
     }
 
